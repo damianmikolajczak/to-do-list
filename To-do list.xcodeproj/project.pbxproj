@@ -16,6 +16,8 @@
 		2D22D86A266BDD3A007AD2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D22D868266BDD3A007AD2BC /* LaunchScreen.storyboard */; };
 		2D22D875266BDD3A007AD2BC /* To_do_listTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D874266BDD3A007AD2BC /* To_do_listTests.swift */; };
 		2D22D880266BDD3A007AD2BC /* To_do_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D87F266BDD3A007AD2BC /* To_do_listUITests.swift */; };
+		2D22D88F266BE09A007AD2BC /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D88D266BE09A007AD2BC /* Task+CoreDataClass.swift */; };
+		2D22D895266BE123007AD2BC /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D893266BE123007AD2BC /* Task+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		2D22D87B266BDD3A007AD2BC /* To-do listUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "To-do listUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D22D87F266BDD3A007AD2BC /* To_do_listUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = To_do_listUITests.swift; sourceTree = "<group>"; };
 		2D22D881266BDD3A007AD2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D22D88D266BE09A007AD2BC /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2D22D893266BE123007AD2BC /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		2D22D859266BDD37007AD2BC /* To-do list */ = {
 			isa = PBXGroup;
 			children = (
+				2D22D891266BE0A3007AD2BC /* Models */,
 				2D22D85A266BDD37007AD2BC /* AppDelegate.swift */,
 				2D22D85C266BDD37007AD2BC /* SceneDelegate.swift */,
 				2D22D85E266BDD37007AD2BC /* ViewController.swift */,
@@ -129,6 +134,15 @@
 				2D22D881266BDD3A007AD2BC /* Info.plist */,
 			);
 			path = "To-do listUITests";
+			sourceTree = "<group>";
+		};
+		2D22D891266BE0A3007AD2BC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2D22D88D266BE09A007AD2BC /* Task+CoreDataClass.swift */,
+				2D22D893266BE123007AD2BC /* Task+CoreDataProperties.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D22D85F266BDD37007AD2BC /* ViewController.swift in Sources */,
+				2D22D88F266BE09A007AD2BC /* Task+CoreDataClass.swift in Sources */,
 				2D22D85B266BDD37007AD2BC /* AppDelegate.swift in Sources */,
 				2D22D85D266BDD37007AD2BC /* SceneDelegate.swift in Sources */,
+				2D22D895266BE123007AD2BC /* Task+CoreDataProperties.swift in Sources */,
 				2D22D865266BDD37007AD2BC /* To_do_list.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
