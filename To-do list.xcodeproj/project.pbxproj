@@ -18,6 +18,9 @@
 		2D22D880266BDD3A007AD2BC /* To_do_listUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D87F266BDD3A007AD2BC /* To_do_listUITests.swift */; };
 		2D22D88F266BE09A007AD2BC /* Task+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D88D266BE09A007AD2BC /* Task+CoreDataClass.swift */; };
 		2D22D895266BE123007AD2BC /* Task+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D22D893266BE123007AD2BC /* Task+CoreDataProperties.swift */; };
+		2D9FDCB5266BED1800C0FC82 /* PendingTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCB4266BED1800C0FC82 /* PendingTasksViewController.swift */; };
+		2D9FDCB7266BF3A600C0FC82 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCB6266BF3A600C0FC82 /* CompletedTasksViewController.swift */; };
+		2D9FDCB9266BF3B300C0FC82 /* OverdueTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCB8266BF3B300C0FC82 /* OverdueTasksViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		2D22D881266BDD3A007AD2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D22D88D266BE09A007AD2BC /* Task+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D22D893266BE123007AD2BC /* Task+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Task+CoreDataProperties.swift"; path = "../../Task+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2D9FDCB4266BED1800C0FC82 /* PendingTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingTasksViewController.swift; sourceTree = "<group>"; };
+		2D9FDCB6266BF3A600C0FC82 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
+		2D9FDCB8266BF3B300C0FC82 /* OverdueTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverdueTasksViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 				2D22D85C266BDD37007AD2BC /* SceneDelegate.swift */,
 				2D22D85E266BDD37007AD2BC /* ViewController.swift */,
 				2D22D860266BDD37007AD2BC /* Main.storyboard */,
+				2D9FDCB4266BED1800C0FC82 /* PendingTasksViewController.swift */,
+				2D9FDCB6266BF3A600C0FC82 /* CompletedTasksViewController.swift */,
+				2D9FDCB8266BF3B300C0FC82 /* OverdueTasksViewController.swift */,
 				2D22D866266BDD3A007AD2BC /* Assets.xcassets */,
 				2D22D868266BDD3A007AD2BC /* LaunchScreen.storyboard */,
 				2D22D86B266BDD3A007AD2BC /* Info.plist */,
@@ -278,9 +287,12 @@
 				2D22D85F266BDD37007AD2BC /* ViewController.swift in Sources */,
 				2D22D88F266BE09A007AD2BC /* Task+CoreDataClass.swift in Sources */,
 				2D22D85B266BDD37007AD2BC /* AppDelegate.swift in Sources */,
+				2D9FDCB7266BF3A600C0FC82 /* CompletedTasksViewController.swift in Sources */,
 				2D22D85D266BDD37007AD2BC /* SceneDelegate.swift in Sources */,
+				2D9FDCB9266BF3B300C0FC82 /* OverdueTasksViewController.swift in Sources */,
 				2D22D895266BE123007AD2BC /* Task+CoreDataProperties.swift in Sources */,
 				2D22D865266BDD37007AD2BC /* To_do_list.xcdatamodeld in Sources */,
+				2D9FDCB5266BED1800C0FC82 /* PendingTasksViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
