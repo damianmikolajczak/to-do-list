@@ -31,13 +31,23 @@ class CompletedTasksViewController: UIViewController {
 
 extension CompletedTasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return completedTasks!.count
+        if completedTasks!.count != 0 {
+            return completedTasks!.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTableCell", for: indexPath)
-        if let taskTitle = completedTasks?[indexPath.row].title {
-            cell.textLabel?.text = taskTitle
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CompletedTableCell", for: indexPath)
+
+        switch completedTasks?.count {
+        case 0:
+            cell.textLabel?.text = "No items found. Press “Add” to add new items."
+        default:
+            if let taskTitle = completedTasks?[indexPath.row].title {
+                cell.textLabel?.text = taskTitle
+            }
         }
         return cell
     }

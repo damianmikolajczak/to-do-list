@@ -31,14 +31,25 @@ class PendingTasksViewController: UIViewController {
 
 extension PendingTasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pendingTasks!.count
+        if pendingTasks!.count != 0 {
+            return pendingTasks!.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTableCell", for: indexPath)
-        if let taskTitle = pendingTasks?[indexPath.row].title {
-            cell.textLabel?.text = taskTitle
+        
+        switch pendingTasks?.count {
+        case 0:
+            cell.textLabel?.text = "No items found. Press “Add” to add new items."
+        default:
+            if let taskTitle = pendingTasks?[indexPath.row].title {
+                cell.textLabel?.text = taskTitle
+            }
         }
+        
         return cell
     }
     

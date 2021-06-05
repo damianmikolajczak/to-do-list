@@ -31,13 +31,23 @@ class OverdueTasksViewController: UIViewController {
 
 extension OverdueTasksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return overdueTasks!.count
+        if overdueTasks!.count != 0 {
+            return overdueTasks!.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PendingTableCell", for: indexPath)
-        if let taskTitle = overdueTasks?[indexPath.row].title {
-            cell.textLabel?.text = taskTitle
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OverdueTableCell", for: indexPath)
+        
+        switch overdueTasks?.count {
+        case 0:
+            cell.textLabel?.text = "No items found. Press “Add” to add new items."
+        default:
+            if let taskTitle = overdueTasks?[indexPath.row].title {
+                cell.textLabel?.text = taskTitle
+            }
         }
         return cell
     }
