@@ -22,6 +22,7 @@
 		2D9FDCB7266BF3A600C0FC82 /* CompletedTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCB6266BF3A600C0FC82 /* CompletedTasksViewController.swift */; };
 		2D9FDCB9266BF3B300C0FC82 /* OverdueTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCB8266BF3B300C0FC82 /* OverdueTasksViewController.swift */; };
 		2D9FDCBB266BFBF100C0FC82 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCBA266BFBF100C0FC82 /* AddTaskViewController.swift */; };
+		2D9FDCBD266C131100C0FC82 /* LocalNotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9FDCBC266C131100C0FC82 /* LocalNotificationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		2D9FDCB6266BF3A600C0FC82 /* CompletedTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTasksViewController.swift; sourceTree = "<group>"; };
 		2D9FDCB8266BF3B300C0FC82 /* OverdueTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverdueTasksViewController.swift; sourceTree = "<group>"; };
 		2D9FDCBA266BFBF100C0FC82 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		2D9FDCBC266C131100C0FC82 /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				2D9FDCB4266BED1800C0FC82 /* PendingTasksViewController.swift */,
 				2D9FDCB6266BF3A600C0FC82 /* CompletedTasksViewController.swift */,
 				2D9FDCB8266BF3B300C0FC82 /* OverdueTasksViewController.swift */,
+				2D9FDCBC266C131100C0FC82 /* LocalNotificationManager.swift */,
 				2D9FDCBA266BFBF100C0FC82 /* AddTaskViewController.swift */,
 				2D22D866266BDD3A007AD2BC /* Assets.xcassets */,
 				2D22D868266BDD3A007AD2BC /* LaunchScreen.storyboard */,
@@ -287,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9FDCBD266C131100C0FC82 /* LocalNotificationManager.swift in Sources */,
 				2D22D85F266BDD37007AD2BC /* ViewController.swift in Sources */,
 				2D22D88F266BE09A007AD2BC /* Task+CoreDataClass.swift in Sources */,
 				2D22D85B266BDD37007AD2BC /* AppDelegate.swift in Sources */,

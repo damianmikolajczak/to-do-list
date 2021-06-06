@@ -16,16 +16,24 @@ class PendingTasksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchData()
+        tasksTableView.dataSource = self
+        tasksTableView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchData()
+        tasksTableView.reloadData()
+    }
+    
+    func fetchData() {
         do {
             let allTasks:[Task] = try context.fetch(Task.fetchRequest())
             pendingTasks = allTasks.filter({ task in
                 return task.status == .Pending
             })
         } catch { }
-        
-        tasksTableView.dataSource = self
-        tasksTableView.delegate = self
     }
 }
 
@@ -45,9 +53,11 @@ extension PendingTasksViewController: UITableViewDataSource {
         case 0:
             cell.textLabel?.text = "No items found. Press “Add” to add new items."
         default:
-            if let taskTitle = pendingTasks?[indexPath.row].title {
-                cell.textLabel?.text = taskTitle
-            }
+            cell.textLabel?.text = pendingTasks?[indexPath.row].title
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            cell.textLabel?.text?.append(" - \(formatter.string(from: (pendingTasks?[indexPath.row].deadline)!))")
         }
         
         return cell

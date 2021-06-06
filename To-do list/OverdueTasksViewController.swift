@@ -16,16 +16,24 @@ class OverdueTasksViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchData()
+        tasksTableView.dataSource = self
+        tasksTableView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        fetchData()
+        tasksTableView.reloadData()
+    }
+    
+    func fetchData() {
         do {
             let allTasks:[Task] = try context.fetch(Task.fetchRequest())
             overdueTasks = allTasks.filter({ task in
                 return task.status == .Overdue
             })
         } catch { }
-        
-        tasksTableView.dataSource = self
-        tasksTableView.delegate = self
     }
 }
 
@@ -45,14 +53,14 @@ extension OverdueTasksViewController: UITableViewDataSource {
         case 0:
             cell.textLabel?.text = "No items found. Press “Add” to add new items."
         default:
-            if let taskTitle = overdueTasks?[indexPath.row].title {
-                cell.textLabel?.text = taskTitle
-            }
+            cell.textLabel?.text = overdueTasks?[indexPath.row].title
+            
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            cell.textLabel?.text?.append(" - \(formatter.string(from: (overdueTasks?[indexPath.row].deadline)!))")
         }
         return cell
     }
-    
-    
 }
 extension OverdueTasksViewController:UITableViewDelegate {
     

@@ -11,6 +11,8 @@ class AddTaskViewController: UIViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    let notificationManager = LocalNotificationManager()
+    
     @IBOutlet var taskTitle: UITextField!
     @IBOutlet var taskDescription: UITextField!
     @IBOutlet var taskDeadline: UIDatePicker!
@@ -20,6 +22,7 @@ class AddTaskViewController: UIViewController {
         taskTitle.placeholder = "Title"
         taskDescription.placeholder = "A short description"
         HideKeyboard()
+        notificationManager.requestForAuthorization()
         // Do any additional setup after loading the view.
     }
     
@@ -38,6 +41,7 @@ class AddTaskViewController: UIViewController {
             
             do {
                 try context.save()
+                notificationManager.addLocalNotification(categoryIdentifier: "Tasks", title: newTask.title!, body: newTask.detail!, date: newTask.deadline!)
             } catch { }
             
             self.dismiss(animated: true, completion: nil)
